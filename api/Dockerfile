@@ -11,8 +11,6 @@ RUN npm install
 
 COPY --chown=node:node . .
 
-RUN npm run build
-
 ARG NODE_ENV=production
 ENV NODE_ENV $NODE_ENV
 
@@ -22,4 +20,4 @@ ENV PORT=8080 \
 EXPOSE 8080
 
 
-CMD [ "npm", "run", "serve" ]
+CMD [ "node", "./bin/www" ]
