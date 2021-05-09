@@ -1,4 +1,4 @@
-FROM node:10
+FROM node:16
 
 WORKDIR /opt/api
 RUN chown -R node:node .
